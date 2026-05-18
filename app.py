@@ -13,11 +13,6 @@ from textblob import TextBlob
 from database import insert_feedback, fetch_feedback, clear_data
 from openai import OpenAI
 
-client = OpenAI(
-    api_key=api_key,
-    base_url="https://openrouter.ai/api/v1"
-)
-
 st.title("📊 BizInsight AI")
 st.caption("AI-powered customer intelligence platform for business growth")
 
