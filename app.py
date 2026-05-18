@@ -132,6 +132,8 @@ if data:
             st.info("💡 You can still use the Dashboard, CSV Upload, and Chart features normally! To enable the AI Assistant, please set your API key and restart the app.")
             st.stop() # This cleanly stops rendering the rest of THIS tab only, preventing a crash.
         st.write("Ask questions about customer experience and improvement strategy.")
+        client = OpenAI(api_key=api_key,
+                    base_url="https://openrouter.ai/api/v1")
 
         user_q = st.text_input("Type your business question here")
 
