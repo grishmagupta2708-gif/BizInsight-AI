@@ -24,7 +24,7 @@ def get_sentiment(text):
     return TextBlob(text).sentiment.polarity
 
 
-def ask_ai(question, reviews):
+def ask_ai(client, question, reviews):
     context = "\n".join(reviews[:40])
 
     prompt = f"""
@@ -134,7 +134,7 @@ if data:
 
         if user_q:
             with st.spinner("Analyzing feedback..."):
-                st.success(ask_ai(user_q, df["review"].tolist()))
+                st.success(ask_ai(client,user_q, df["review"].tolist()))
 
 
     # ================= CONTROLS =================
