@@ -14,8 +14,9 @@ from database import insert_feedback, fetch_feedback, clear_data
 from openai import OpenAI
 
 # ---------- Chimera AI Client ----------
-'''
+
 api_key = os.getenv("OPENROUTER_API_KEY")
+'''
 if not api_key:
     raise ValueError("OPENROUTER_API_KEY environment variable not set. Please create a .env file with your API key.")
 '''
